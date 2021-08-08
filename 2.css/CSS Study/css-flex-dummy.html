@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS flex</title>
+    <style>
+        * {
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        body {
+            max-width: 1200px;
+            margin:auto;
+        }
+        html {
+            font-family:verdana, Geneva,Tahoma,sans-serif;
+        }
+        header {
+            background-color:rgba(73, 23, 211, 0.534);
+            height: 10vh;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+        }
+        .navigation {
+
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            margin: 0; 
+            background: deepskyblue;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            display: block;
+            padding: 1em;
+            color: white;
+        }
+
+        .navigation a:hover {
+            background: #1565C0;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                justify-content: center;
+            }
+            .navigation {
+                width: 100%;
+                justify-content: space-around;
+            }
+        }
+
+        @media (max-width: 600px) {
+            header {
+                height: auto;
+                text-align: center;
+            }
+            .navigation {
+                flex-flow: column wrap;
+                padding: 0;
+            }
+            .navigation li {
+                border-bottom: 1px solid grey;
+            }
+        }
+        main {
+            background-color: teal;
+            background-image: url(https://picsum.photos/id/1015/1200);
+            height: 80vh;
+            display:flex;
+            flex-wrap:wrap;
+        }
+        footer {
+            background-color: tomato;
+            height: 10vh;
+            background-color:rgba(73, 23, 211, 0.534);
+        }
+        main > * {
+            outline:1px dashed lime;
+            flex: 1; 
+            /* flex glow=1  */
+        }
+        .main-c {
+            flex: 4 500px;
+            text-align:center;
+            display:flex;
+            flex-flow: column;
+            justify-content:flex-start;
+            color:gold
+        }
+         .main-l {
+           background-color:rgba(211, 23, 148, 0.116);
+           flex-basis: 100px;
+        }
+         .main-r {
+           background-color:rgba(211, 23, 139, 0.205);
+           flex-basis: 100px;
+        }
+    </style>
+</head>
+<body>
+  <header>
+    <ul class="navigation">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Products</a></li>
+    <li><a href="#">Contact</a></li>
+    </ul>
+  </header>
+  <main>
+      <div class="main-l">
+          <h2>News</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, beatae.</p>
+      </div>
+      <div class="main-c">
+          <h1>Title</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, doloremque.
+          </p>
+          <div style="margin: 60px 20px 0 60px;">
+          <h3 style="text-align:left;">Title</h3>
+          <p style="text-align:left;">Lorem ipsum dolor sit amet.</p>
+        </div>
+        </div>
+      <div class="main-r">
+          <h3>Ads</h3>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla quod sequi fuga doloremque nemo facilis?</p>
+      </div>
+  </main>
+  <footer>Footer</footer>  
+</body>
+</html>

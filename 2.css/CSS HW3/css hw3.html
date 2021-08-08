@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS HW3</title>
+    <style>
+        body {
+            display:flex;
+            flex-flow:column wrap;
+        }
+        main {
+            background-color: rgba(176, 180, 206,0.3);
+            height:80vh;
+            display:flex;
+            flex-wrap:wrap;
+            justify-content: space-evenly;
+        }
+        footer {
+            background-color:white;
+            height: 20vh;
+            display:flex;
+        }
+        .main-l {
+           flex:1 700px;
+        }
+        .main-l > * {
+           text-align: left;
+        }
+        h1 {
+            padding-top:100px;
+            padding-left:300px;           
+            font-family:  Helvetica,Arial, sans-serif;
+            font-size:400%;
+            font-style: bold;
+            color : blue;
+            margin: 0;
+
+        }
+        p {
+            padding-left:300px;
+            font-family:  Helvetica,Arial, sans-serif;
+            font-size:150%;
+            margin: 0;
+        }
+        form {
+            background-color: white;
+            border-radius: 5px;
+            padding:20px;
+            width:300px;
+            height: 250px;
+            box-shadow:2px 2px 2px 2px rgba(207, 207, 207,0.9); 
+            margin-left:300px;
+            margin-top:100px;
+
+        }
+
+        form * {
+            margin :10px;
+            width: 90%;
+            height: 35px;
+            align-items: center;
+            border-radius: 5px;
+        }
+
+        .url {
+            padding-left: 70px;
+            text-decoration:none;
+        }
+
+
+
+
+        input[type=text] {
+            size:50;
+        }
+        input[type=submit] {
+            background-color: rgb(97, 67, 231);
+            color:white;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 18px;
+        }
+        input[type=submit].new_acc {
+            width: 50%;
+            background-color:rgb(1, 187, 1);
+            position:relative;
+            left:65px;
+            bottom:60px;
+            height: 60px;
+        }
+
+
+
+
+        .main-r {
+            flex:1 700px;
+        }
+
+        .footer-l {
+            flex-basis:300px;
+        }
+        .footer-c {
+            flex-basis:900px;
+        }
+        .footer-r {
+            flex-basis:100px;
+        }
+
+
+
+
+
+
+        .caption {
+            position: relative;
+            top:10px;
+            right:-10px;
+            font-size:0.8em;
+        }
+
+        ul {
+            text-align: left;
+
+
+        }
+
+        li {
+            display: inline-block;
+        }
+        li a{
+            font-size:14px;
+            text-decoration: none;
+            color: grey;
+            margin-left:10px;
+
+        }
+
+
+        .low {
+            text-align:left;
+            position: relative;
+            left: 10px;
+            color: grey;
+        }
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <main>
+        <div class="main-l">
+            <h1>facebook</h1>
+            <p>Facebook ช่วยคุณเชื่อมต่อและแชร์กับผู้คนมากมายรอบตัวคุณ</p>
+        </div>
+        <div class="main-r">
+            <div class="form"> 
+
+            <form action="/action_page.php">
+
+                <input type="text" id="email" name="email" placeholder="อีเมลล์หรือหมายเลขโทรศัพท์มือถือ">
+                <br>
+                <input type="text" id="lname" name="lastname" placeholder="รหัสผ่าน">
+                <br>
+                <input type="submit" value="เข้าสู่ระบบ">
+                <a href="url" class="url">&nbsp;ลืมรหัสผ่านใช่หรือไม่</a>
+                <div class="_8icz"></div>
+                <input class="new_acc" type="submit" value="สร้างบัญชีใหม่">
+
+            </form>
+            <p class="caption"><b>สร้างเพจ</b> สำหรับบุคคลมีชื่อเสียง วงดนตรี หรือธุรกิจ</p>
+           </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-l"></div>
+        <div class="footer-c">
+        <ul class="language">
+            <li><a href="#">ภาษาไทย </a></li>
+            <li><a href="#">English (UK)</a></li>
+            <li><a href="#">日本語</a></li>
+            <li><a href="#">中文(简体)</a></li>
+            <li><a href="#">Tiếng Việt</a></li>
+            <li><a href="#">Français (France)</a></li>
+            <li><a href="#">Deutsch</a></li>
+            <li><a href="#">Русский</a></li>
+            <li><a href="#">Español</a></li>
+            <li><a href="#">Português (Brasil)</a></li>
+            <li><a href="#">Italiano</a></li>
+        </ul>
+        <hr width="90%">
+        <ul class="function">
+            <li><a href="#">สมัคร</a></li>
+            <li><a href="#">เข้าสู่ระบบ</a></li>
+            <li><a href="#">Messenger</a></li>
+            <li><a href="#">Facebook Lite</a></li>
+            <li><a href="#">Watch</a></li>
+            <li><a href="#">ผู้คน</a></li>
+            <li><a href="#">เพจ</a></li>
+            <li><a href="#">หมวดหมู่เพจ</a></li>
+            <li><a href="#">สถานที่</a></li>
+            <li><a href="#">เกม</a></li>
+            <li><a href="#">ตำแหน่งที่ตั้ง</a></li>
+            <li><a href="#">Marketplace</a></li>
+            <li><a href="#">Facebook Pay</a></li>
+            <li><a href="#">กลุ่ม</a></li>
+            <li><a href="#">งาน</a></li>
+            <li><a href="#">Oculus</a></li>
+            <li><a href="#">Portal</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">ในพื้นที่</a></li>
+            <li><a href="#">โครงการระดมทุน</a></li>
+            <li><a href="#">บริการ</a></li>
+            <li><a href="#">ศูนย์ข้อมูลการลงคะแนนเสียง</a></li>
+            <li><a href="#">เกี่ยวกับ</a></li>
+            <li><a href="#">สร้างโฆษณา</a></li>
+            <li><a href="#">สร้างเพจ</a></li>
+            <li><a href="#">ผู้พัฒนา</a></li>
+            <li><a href="#">ร่วมงานกับ Facebook</a></li>
+            <li><a href="#">ความเป็นส่วนตัว</a></li>
+            <li><a href="#">คุกกี้</a></li>
+            <li><a href="#">ตัวเลือกโฆษณา</a></li>
+            <li><a href="#">เงื่อนไข</a></li>
+            <li><a href="#">ความช่วยเหลือ</a></li>
+            <br><br><br>
+            <div class="low">Facebook © 2021</div>
+            <br><br>
+        </ul>
+        </div>
+        <div class="footer-r"></div>
+    </footer>
+</body>
+</html>
