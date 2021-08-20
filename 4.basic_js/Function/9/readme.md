@@ -1,0 +1,11 @@
+1. Chanat Amornvasin
+2. JavaScript Function Practice #9
+
+    9) จงเขียน method draw(int n) ให้ print ออกมาในกรณีที่ n มีค่าต่างๆ ได้ผลลัพธ์ดังนี้
+
+        2               2                   2
+        4               4                   4
+                        6                   6
+                                            8
+        
+        n = 2           n = 3               n = 4

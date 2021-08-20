@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let ans = +prompt('Enter Answer');
+        for (let i=+prompt('Enter guessing Number');i !== ans;i=+prompt('Enter guessing Number')) {
+            if (i<ans) {
+                alert('Less than');
+            } else if (i>ans) {
+                alert('More than');
+            } 
+        }
+        
+    </script>
+</body>
+</html>
