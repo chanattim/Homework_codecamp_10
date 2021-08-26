@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let array1 = [
+            {name:"apple",birth:"2000-01-01"},
+            {name:"banana",birth:"1990-10-01"},
+            {name:"watermelon",birth:"1985-12-01"},
+        ]
+        let array2 = array1.map( x => ({
+            name: x.name,
+            birth: x.birth,
+            age : function() {
+                let birthday = new Date(x.birth);
+                let birth_day = birthday.getDate()
+                let birth_month = birthday.getMonth() + 1;
+                let birth_year = birthday.getFullYear();
+
+                let current_date = new Date();
+                let current_day = current_date.getDate();
+                let current_month = current_date.getMonth() + 1;
+                let current_year = current_date.getFullYear();
+
+                let current_age = 0;
+                if (current_month > birth_month) {
+                    if (current_day > birth_day) {
+                        current_age = current_year - birth_year;
+                    } else {
+                        current_age = current_year - birth_year - 1
+                    };
+                } else {
+                    current_age = current_year - birth_year - 1;
+                }
+                return current_age;
+            }()
+        }));
+    </script>
+</body>
+</html>
