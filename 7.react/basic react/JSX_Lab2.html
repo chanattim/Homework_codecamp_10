@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSX_Lab1</title>
+    <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        const rootElement = document.getElementById("root")
+        const stri = "Tim_Chanat"
+        const numb = 25
+        const bo = true
+        const noo = null
+        const und = undefined
+        const arr = [1,2,3,4,5]
+        const obj = {
+            name:"Atom",
+            price:100
+        }
+        const element = <div className = "container">
+            <p>{stri}</p>
+            <p>{numb}</p>
+            <p>{bo}</p>
+            <p>{noo}</p>
+            <p>{und}</p>
+            <p>{arr}</p>
+            <p>{obj}</p>
+            </div>
+        ReactDOM.render(element,rootElement)
+    </script>
+</body>
+</html>
