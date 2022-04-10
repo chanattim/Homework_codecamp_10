@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Element Lab</title>
+    <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+        const rootElement = document.getElementById("root")
+        const element = React.createElement(
+            "div",
+            {
+                className:"Container"
+            },
+            React.createElement(
+                "h1",
+                {
+                    style:{color:'green'}
+                },
+                "Resume"
+            ),
+            React.createElement(
+                "h1",
+                {
+                    
+                },
+                "Chanat Amornvasin"
+            ),
+            React.createElement(
+                "p",
+                {
+                    style: {background: "black",color:"white"}
+                },
+                "White is my favorite color"
+            ),
+            React.createElement(
+                "p",
+                {
+                    
+                },
+                "I am 178 cm.",
+            ),
+            React.createElement(
+                "p",
+                {cd
+                    
+                },
+                "My weight is 72 kg."
+            ),
+            React.createElement(
+                "p",
+                {
+                    
+                },
+                "Never GiveUp"
+            )
+        )
+            
+        ReactDOM.render(element,rootElement)
+    </script>
+
+    
+    
+</body>
+</html>
