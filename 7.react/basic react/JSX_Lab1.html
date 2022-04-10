@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSX_Lab1</title>
+    <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        const rootElement = document.getElementById("root")
+        const myComponent = {
+            one() {
+                return <h1>Object 1</h1>
+            },
+            two(props) {
+                return <h1>Object 2 {props.name}</h1>
+            },
+            three() {
+                return React.createElement(
+                    "h1",
+                    {
+                        
+                    },
+                    "Object 3"
+                )
+            }
+        }
+        const element = <div className = "container">
+                <myComponent.one />
+                <myComponent.two  name = "Chanat" />
+                <myComponent.three />
+            </div>
+        
+        ReactDOM.render(element,rootElement)
+
+    </script>
+</body>
+</html>
