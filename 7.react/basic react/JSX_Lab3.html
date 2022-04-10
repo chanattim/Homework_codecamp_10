@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSX_Lab1</title>
+    <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        const rootElement = document.getElementById("root")
+        const arr1 = ["a","b","c","d","e"]
+        const arr2 = [<p>a</p>,<p>b</p>,<p>c</p>,<p>d</p>,<p>e</p>]
+        const arr3 = arr1.map( (item,index) => <p>{item}</p> )
+        const element = <div className = "container">
+                <h1>{arr1}</h1>
+                <h1>{arr2}</h1>
+                <h1>{arr3}</h1>
+            </div>
+
+        ReactDOM.render(element,rootElement)
+    </script>
+</body>
+</html>
